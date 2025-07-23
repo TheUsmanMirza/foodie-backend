@@ -24,6 +24,8 @@ def get_all_restaurants_name():
 def get_restaurant(current_user: User = Depends(get_current_user)):
     try:
         return services.get_restaurant(current_user.restaurant_id)
+    except HTTPException as exc:
+        raise exc
     except Exception as exc:
         logger.error(f"Error fetching restaurant data: {str(exc)}", exc_info=True)
         raise HTTPException(status_code=500, detail="Failed to fetch restaurant data.")

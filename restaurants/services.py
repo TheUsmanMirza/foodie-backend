@@ -1,4 +1,5 @@
 from fastapi import HTTPException
+import uuid
 from restaurants import repository
 from restaurants.schema import RestaurantResponse
 import logging
@@ -21,9 +22,12 @@ def get_restaurant_name():
         raise HTTPException(status_code=500, detail="Failed to fetch restaurant names.")
 
 def get_restaurant(restaurant_id):
-    """
-    Get the restaurant data from the database.
-    """
+    if not restaurant_id:
+        raise HTTPException(status_code=400, detail="Missing restaurant_id.")
+    try:
+        uuid.UUID(str(restaurant_id))
+    except Exception:
+        raise HTTPException(status_code=422, detail="Invalid restaurant_id format.")
     try:
         data = repository.get_restaurant_data(restaurant_id)
         if not data:
@@ -41,6 +45,8 @@ def get_restaurant(restaurant_id):
             two_stars=data.two_stars,
             one_stars=data.one_stars,
         )
+    except HTTPException:
+        raise
     except Exception as exc:
         logger.error(f"Error in get_restaurant: {str(exc)}", exc_info=True)
         raise HTTPException(status_code=500, detail="Failed to fetch restaurant data.")

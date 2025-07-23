@@ -21,3 +21,5 @@ PyJWT
 python-jose
 pydantic[email]
 uvicorn[standard]
+pytest
+httpx
