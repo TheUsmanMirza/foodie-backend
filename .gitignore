@@ -111,7 +111,6 @@ ipython_config.py
 #   commonly ignored for libraries.
 #   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
 #poetry.lock
-<<<<<<< HEAD
 
 # pdm
 #   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
@@ -123,7 +122,6 @@ ipython_config.py
 .pdm-python
 .pdm-build/
 
-=======
 #poetry.toml
 
 # pdm
@@ -142,7 +140,6 @@ ipython_config.py
 #   in the .venv directory. It is recommended not to include this directory in version control.
 .pixi
 
->>>>>>> 9b53783 (Initial commit)
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
