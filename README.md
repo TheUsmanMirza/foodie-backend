@@ -75,8 +75,4 @@ It includes the application API endpoints with user authentication, vector-based
 
 ---
 
-## 📎 Links
 
-- **Frontend Repository:** [Next.js Dashboard](https://github.com/hamza-shafiq/review-munch-dashboard)  
-- **Backend Repository:** [FastAPI + LLM Agent](https://github.com/hamza-shafiq/review-munch-agent)  
-- **Live App:** [http://reviewmunch.com](http://reviewmunch.com)
