@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FOODIE - API
 
 ## Description  
@@ -35,7 +36,3 @@ It includes the application API endpoints with user authentication, vector-based
    ```
 
    - FastAPI backend will be available at: `http://localhost:8000`
-
----
-
-
