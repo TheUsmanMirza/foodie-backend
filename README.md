@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # FOODIE - API
 
 ## Description  
@@ -35,4 +34,4 @@ It includes the application API endpoints with user authentication, vector-based
    docker-compose up --build
    ```
 
-   - FastAPI backend will be available at: `http://localhost:8000`
+- FastAPI backend will be available at: `http://localhost:8000`
